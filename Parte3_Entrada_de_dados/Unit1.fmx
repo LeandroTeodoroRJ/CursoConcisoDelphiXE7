@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Entrada de dados.'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Label1: TLabel
+    Height = 23.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Entrada de dados usando a propriedade'
+    Width = 337.000000000000000000
+  end
+  object Label2: TLabel
+    Height = 23.000000000000000000
+    Position.X = 15.000000000000000000
+    Position.Y = 48.000000000000000000
+    Text = 'KeyboardType do TEdit.'
+    Width = 337.000000000000000000
+  end
+  object Label3: TLabel
+    Height = 23.000000000000000000
+    Position.X = 15.000000000000000000
+    Position.Y = 88.000000000000000000
+    Text = 'Teclado default'
+    Width = 138.000000000000000000
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    Position.X = 152.000000000000000000
+    Position.Y = 80.000000000000000000
+    Width = 121.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Label4: TLabel
+    Height = 23.000000000000000000
+    Position.X = 15.000000000000000000
+    Position.Y = 128.000000000000000000
+    Text = 'Num'#233'rico'
+    Width = 90.000000000000000000
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 5
+    KeyboardType = NumberPad
+    Position.X = 112.000000000000000000
+    Position.Y = 120.000000000000000000
+    Width = 161.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Label5: TLabel
+    Height = 23.000000000000000000
+    Position.X = 15.000000000000000000
+    Position.Y = 168.000000000000000000
+    Text = 'E-mail'
+    Width = 90.000000000000000000
+  end
+  object Edit3: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    KeyboardType = EmailAddress
+    Position.X = 112.000000000000000000
+    Position.Y = 160.000000000000000000
+    Width = 161.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Label6: TLabel
+    Height = 23.000000000000000000
+    Position.X = 15.000000000000000000
+    Position.Y = 216.000000000000000000
+    Text = 'Internet URL'
+    Width = 114.000000000000000000
+  end
+  object Edit4: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    KeyboardType = URL
+    Position.X = 128.000000000000000000
+    Position.Y = 208.000000000000000000
+    Width = 145.000000000000000000
+    Height = 32.000000000000000000
+  end
+end

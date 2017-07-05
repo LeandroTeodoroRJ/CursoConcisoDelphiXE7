@@ -1,0 +1,63 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Button1: TButton
+    Align = Top
+    Height = 44.000000000000000000
+    TabOrder = 1
+    Text = 'Button1'
+    Width = 384.000000000000000000
+  end
+  object Button2: TButton
+    Align = Scale
+    Height = 44.000000000000000000
+    Position.Y = 48.000000000000000000
+    TabOrder = 2
+    Text = 'Button2'
+    Width = 113.000000000000000000
+  end
+  object Button3: TButton
+    Align = Scale
+    Height = 44.000000000000000000
+    Position.X = 112.000000000000000000
+    Position.Y = 48.000000000000000000
+    TabOrder = 3
+    Text = 'Button3'
+    Width = 273.000000000000000000
+  end
+  object Button4: TButton
+    Align = Bottom
+    Height = 44.000000000000000000
+    Position.Y = 523.000000000000000000
+    TabOrder = 4
+    Text = 'Button4'
+    Width = 384.000000000000000000
+  end
+  object Panel1: TPanel
+    Align = Scale
+    Height = 120.000000000000000000
+    Position.X = 136.000000000000000000
+    Position.Y = 96.000000000000000000
+    Width = 120.000000000000000000
+    TabOrder = 5
+    object Button5: TButton
+      Align = Client
+      Height = 120.000000000000000000
+      TabOrder = 1
+      Text = 'Button5'
+      Width = 120.000000000000000000
+    end
+  end
+end

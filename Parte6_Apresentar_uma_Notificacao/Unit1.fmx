@@ -1,0 +1,36 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Button1: TButton
+    Height = 44.000000000000000000
+    Position.X = 104.000000000000000000
+    Position.Y = 72.000000000000000000
+    TabOrder = 1
+    Text = 'Mostrar'
+    Width = 177.000000000000000000
+    OnClick = Button1Click
+  end
+  object Label1: TLabel
+    Height = 23.000000000000000000
+    Position.X = 72.000000000000000000
+    Position.Y = 16.000000000000000000
+    Text = 'Apresentar uma notifica'#231#227'o.'
+    Width = 249.000000000000000000
+  end
+  object NotificationCenter1: TNotificationCenter
+    Left = 176
+    Top = 152
+  end
+end

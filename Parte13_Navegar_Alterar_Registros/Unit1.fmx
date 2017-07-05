@@ -1,0 +1,137 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 498
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Label1: TLabel
+    Height = 17.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 128.000000000000000000
+    Text = 'ID:'
+    Width = 49.000000000000000000
+  end
+  object Label2: TLabel
+    Height = 17.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 160.000000000000000000
+    Text = 'Nome:'
+    Width = 57.000000000000000000
+  end
+  object Label3: TLabel
+    Height = 17.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 192.000000000000000000
+    Text = 'Telefone:'
+    Width = 65.000000000000000000
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    Text = '98743268'
+    Position.X = 104.000000000000000000
+    Position.Y = 192.000000000000000000
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 5
+    Text = 'Paulo'
+    Position.X = 104.000000000000000000
+    Position.Y = 160.000000000000000000
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+  end
+  object Edit3: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Text = '1'
+    Position.X = 104.000000000000000000
+    Position.Y = 128.000000000000000000
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+  end
+  object BindNavigator1: TBindNavigator
+    Height = 33.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 232.000000000000000000
+    Width = 249.000000000000000000
+    TabOrder = 11
+    DataSource = BindSourceDB1
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object Label4: TLabel
+    Height = 17.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 96.000000000000000000
+    Text = 'Navegando Utilizando o LiveBindings'
+    Width = 217.000000000000000000
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from Tabela_Navegar')
+    Left = 312
+    Top = 8
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 408
+    Top = 8
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDQuery1
+    ScopeMappings = <>
+    Left = 112
+    Top = 8
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'Id'
+      Control = Edit3
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'Nome'
+      Control = Edit2
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'Telefone'
+      Control = Edit1
+      Track = False
+    end
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\DADOS\Informatica\Info_projetos\Curso_Delphi_XE7\Par' +
+        'te13_Navegar_Alterar_Registros\Banco_de_Dados\Navegar.db3'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    Connected = True
+    Left = 216
+    Top = 8
+  end
+end

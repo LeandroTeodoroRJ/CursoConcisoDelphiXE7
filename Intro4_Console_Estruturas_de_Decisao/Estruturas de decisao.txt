@@ -1,0 +1,48 @@
+ESTRUTURAS DE DECISÃO COM O DELPHI
+	FAZER O RESTO DEPOIS
+
+1)COMANDO IF
+
+If True then ShowMessage('True!');
+
+If False then ShowMessage('True') else ShowMessage('False');
+
+if (condição) then
+	begin
+	A:=3;
+	B:=5;
+	end
+else
+	begin
+	A:=1;
+	B:=7;
+end;
+
+2) COMANDO WHILE
+
+ While (a<5) Do
+ begin
+ Label1.Caption := 'a';
+ a=a+1;
+ end; 
+
+3) COMANDO FOR
+
+ For cont := 1 To 100 Do { Repete o bloco 100 vezes }
+ begin
+ x := x + cont;
+ Label4.caption := str(x);
+ end; 
+
+4) COMANDO CASE
+
+ case combobox1.ItemIndex of 
+  0 : begin 
+     Label1.caption := 'OPÇÃO1'; 
+     Label2.caption := 'OPÇÃO2'; 
+     end; 
+  1 : begin 
+      Label1.caption := 'TESTE1'; 
+      Label2.caption := 'TESTE2' 
+      end; 
+

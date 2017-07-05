@@ -1,0 +1,26 @@
+OPERADORES DO DELPHI
+
+COMPARAÇÃO
+>	maior que
+<	menor que
+>=	maior igual
+<=	menor igual
+=	igualdade (comparação)
+<>	diferente de 
+
+ATITMÉTICOS
++	soma
+-	subtração
+*	multiplicação
+/	divisão
+div	divisão por inteiro
+mod	reotorna o resto da divisão
+
+LÓGICOS
+AND	lógica "e"
+OR	lógica "ou"
+NOT	lógica "não" operador de inversão
+XOR	ou exclusivo
+
+OPERADORES DE ATRIBUIÇÃO
+:=	atribui um valor a uma variável

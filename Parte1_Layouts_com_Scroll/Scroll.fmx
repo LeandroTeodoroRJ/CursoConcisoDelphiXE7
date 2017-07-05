@@ -1,0 +1,77 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Label1: TLabel
+    Height = 23.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 32.000000000000000000
+    Text = 'Parte 1 - Telas com Scroll '
+    Width = 329.000000000000000000
+  end
+  object ScrollBox1: TScrollBox
+    Height = 185.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 120.000000000000000000
+    TabOrder = 2
+    Width = 193.000000000000000000
+    object Button1: TButton
+      Height = 44.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 173.000000000000000000
+      TabOrder = 0
+      Text = 'Button1'
+      Width = 73.000000000000000000
+    end
+    object Button2: TButton
+      Height = 44.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 117.000000000000000000
+      TabOrder = 1
+      Text = 'Button1'
+      Width = 73.000000000000000000
+    end
+    object Button3: TButton
+      Height = 44.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 61.000000000000000000
+      TabOrder = 2
+      Text = 'Button1'
+      Width = 73.000000000000000000
+    end
+    object Button4: TButton
+      Height = 44.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 5.000000000000000000
+      TabOrder = 3
+      Text = 'Button1'
+      Width = 73.000000000000000000
+    end
+  end
+  object Label2: TLabel
+    Height = 23.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 96.000000000000000000
+    Text = 'Componente TScrollBox'
+    Width = 329.000000000000000000
+  end
+  object Label3: TLabel
+    Height = 49.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 352.000000000000000000
+    Text = 'Configura'#231#245'es do componente no FormCreate'
+    Width = 329.000000000000000000
+  end
+end

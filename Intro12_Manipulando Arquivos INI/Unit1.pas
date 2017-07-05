@@ -1,0 +1,71 @@
+unit Unit1;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  IniFiles, FMX.Edit, System.IOUtils;
+//Incluir IniFiles, System.IOUtils
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Label2: TLabel;
+    Edit2: TEdit;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+procedure GravaIni(ponteito: string; dado: string);
+var
+  ArqIni: TIniFile;
+begin
+  ArqIni := TIniFile.Create(System.IOUtils.TPath.GetDocumentsPath+System.SysUtils.PathDelim+'Config.ini');
+  try
+    ArqIni.WriteString('cfg', 'ponteiro', dado);
+  finally
+    ArqIni.Free;
+  end;
+end;
+
+function LeIni(const ponteito: string): string;
+var
+  ArqIni: TIniFile;
+  dado: string;
+begin
+  ArqIni := TIniFile.Create(System.IOUtils.TPath.GetDocumentsPath+System.SysUtils.PathDelim+'Config.ini');
+  try
+    dado := ArqIni.ReadString('cfg', 'ponteiro', 'Erro ao ler valor');
+  finally
+    ArqIni.Free;
+  end;
+result:=dado;
+end;
+
+{$R *.fmx}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+GravaINI('01',Edit2.Text);
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+label5.Text:= System.IOUtils.TPath.GetDocumentsPath+System.SysUtils.PathDelim;
+Edit2.Text:=LeIni('01');
+end;
+
+end.
