@@ -56,8 +56,8 @@ object Form1: TForm1
     Height = 17.000000000000000000
     Position.X = 16.000000000000000000
     Position.Y = 136.000000000000000000
-    Text = 'Caminho do Path para grava'#231#227'o:'
-    Width = 193.000000000000000000
+    Text = 'Caminho do Path:'
+    Width = 120.000000000000000000
   end
   object Label5: TLabel
     Height = 17.000000000000000000

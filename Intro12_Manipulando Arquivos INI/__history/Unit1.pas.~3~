@@ -1,0 +1,56 @@
+unit Unit1;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  IniFiles, FMX.Edit;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Edit1: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+procedure GravaIni(aTexto: string);
+var
+  ArqIni: TIniFile;
+begin
+  ArqIni := TIniFile.Create('C:\DADOS\Informatica\Info_projetos\Curso_Delphi_XE7\Parte9_Arquivos_INI_2\Config.ini');
+  try
+    ArqIni.WriteString('Dados', 'Texto', aTexto);
+  finally
+    ArqIni.Free;
+  end;
+end;
+
+procedure LeIni(var aTexto: string);
+var
+  ArqIni: TIniFile;
+begin
+  ArqIni := TIniFile.Create('C:\DADOS\Informatica\Info_projetos\Curso_Delphi_XE7\Parte9_Arquivos_INI_2\Config.ini');
+  try
+    aTexto := ArqIni.ReadString('Dados', 'Texto', aTexto);
+  finally
+    ArqIni.Free;
+  end;
+end;
+
+{$R *.fmx}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+GravaINI('Teste');
+end;
+
+end.

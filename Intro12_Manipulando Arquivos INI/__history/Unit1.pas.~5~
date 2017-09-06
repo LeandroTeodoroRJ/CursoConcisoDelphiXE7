@@ -11,14 +11,11 @@ uses
 type
   TForm1 = class(TForm)
     Button1: TButton;
+    Edit1: TEdit;
+    Label1: TLabel;
     Label2: TLabel;
     Edit2: TEdit;
-    Label1: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
     procedure Button1Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,43 +26,35 @@ var
   Form1: TForm1;
 
 implementation
-procedure GravaIni(ponteiro: string; dado: string);
+procedure GravaIni(aTexto: string);
 var
   ArqIni: TIniFile;
 begin
   ArqIni := TIniFile.Create(System.IOUtils.TPath.GetDocumentsPath+System.SysUtils.PathDelim+'Config.ini');
   try
-    ArqIni.WriteString('cfg', ponteiro, dado);
+    ArqIni.WriteString('Dados', 'Texto', aTexto);
   finally
     ArqIni.Free;
   end;
 end;
 
-function LeIni(const ponteiro: string): string;
+procedure LeIni(var aTexto: string);
 var
   ArqIni: TIniFile;
-  dado: string;
 begin
   ArqIni := TIniFile.Create(System.IOUtils.TPath.GetDocumentsPath+System.SysUtils.PathDelim+'Config.ini');
   try
-    dado := ArqIni.ReadString('cfg', ponteiro, 'Erro ao ler valor');
+    aTexto := ArqIni.ReadString('Dados', 'Texto', aTexto);
   finally
     ArqIni.Free;
   end;
-result:=dado;
 end;
 
 {$R *.fmx}
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-GravaINI('01',Edit2.Text);
-end;
-
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-label5.Text:= System.IOUtils.TPath.GetDocumentsPath+System.SysUtils.PathDelim;
-Edit2.Text:=LeIni('01');
+GravaINI('Teste');
 end;
 
 end.
