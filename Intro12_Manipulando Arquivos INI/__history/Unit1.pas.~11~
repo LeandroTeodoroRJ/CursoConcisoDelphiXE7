@@ -41,7 +41,7 @@ begin
   end;
 end;
 
-function LeIni(ponteiro: string): string;
+function LeIni(const ponteiro: string): string;
 var
   ArqIni: TIniFile;
   dado: string;
